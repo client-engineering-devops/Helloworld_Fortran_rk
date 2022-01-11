@@ -1,22 +1,22 @@
 {
     "user1" : {
-       "name" : "mahesh",
-       "password" : "password1",
-       "profession" : "teacher",
+       "name" : "kramerro",
+       "password" : "password",
+       "profession" : "bootlegger",
        "id": 1
     },
     
     "user2" : {
-       "name" : "suresh",
-       "password" : "password2",
-       "profession" : "librarian",
+       "name" : "jimmy",
+       "password" : "password",
+       "profession" : "pirate",
        "id": 2
     },
     
     "user3" : {
-       "name" : "ramesh",
-       "password" : "password3",
-       "profession" : "clerk",
+       "name" : "sluggo",
+       "password" : "password",
+       "profession" : "bald headed scamp",
        "id": 3
     }
  }

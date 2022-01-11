@@ -16,7 +16,7 @@ RUN curl -sL https://rpm.nodesource.com/setup_16.x | bash -
 RUN yum install -y nodejs
  
 #COPY package.json package-lock.json server.js users.json ./
-COPY package.json server.js users.json ./
+COPY package.json package-lock.json server.js users.json ./
 RUN npm install
  
 # configure the container to run the hello world executable by default
