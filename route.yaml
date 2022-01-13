@@ -1,0 +1,8 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: helloworld_fortran_rk
+spec:
+  to:
+    kind: Service
+    name: helloworld_fortran_rk

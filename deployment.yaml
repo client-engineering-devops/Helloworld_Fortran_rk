@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: helloworld_fortran_rk
+  labels:
+    app: helloworld_fortran_rk
+spec:
+  replicas: 3
+  selector:
+    matchLabelscc:
+      app: helloworld_fortran_rk
+  template:
+    metadata:
+      labels:
+        app: helloworld_fortran_rk
+    spec:
+      containers:
+      - name: helloworld_fortran_rk
+        image: quay.io/kramerro_ibm/helloworld_fortran_rk:latest
+        ports:
+        - containerPort: 8081
