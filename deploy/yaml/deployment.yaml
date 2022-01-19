@@ -20,5 +20,7 @@ spec:
         image: quay.io/kramerro_ibm/helloworld_fortran_rk:latest
         ports:
         - containerPort: 8081
-        - protocol: TCP
+          protocol: TCP
         imagePullPolicy: Always
+
+

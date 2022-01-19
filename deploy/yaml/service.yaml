@@ -4,6 +4,7 @@ metadata:
   name: helloworldfortran
   namespace: helloworldfortran
 spec:
+  type: LoadBalancer
   selector:
     app: helloworldfortran
   ports:
