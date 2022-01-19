@@ -1,10 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: helloworld_fortran_rk
+  name: helloworldfortran
+  namespace: helloworldfortran
 spec:
   selector:
-    app: helloworld_fortran_rk
+    app: helloworldfortran
   ports:
   - protocol: TCP
     port: 80

@@ -1,8 +1,11 @@
 apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
-  name: helloworld_fortran_rk
+  name: helloworldfortran
+  namespace: helloworldfortran
 spec:
   to:
     kind: Service
-    name: helloworld_fortran_rk
+    name: helloworldfortran
+  port: 
+    targetPort: 8081

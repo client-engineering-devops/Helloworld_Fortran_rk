@@ -1,21 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: helloworld_fortran_rk
+  name: helloworldfortran
   labels:
-    app: helloworld_fortran_rk
+    app: helloworldfortran
+  namespace: helloworldfortran
 spec:
-  replicas: 3
+  replicas: 1
   selector:
-    matchLabelscc:
-      app: helloworld_fortran_rk
+    matchLabels:
+      app: helloworldfortran
   template:
     metadata:
       labels:
-        app: helloworld_fortran_rk
+        app: helloworldfortran
     spec:
       containers:
-      - name: helloworld_fortran_rk
+      - name: helloworldfortran
         image: quay.io/kramerro_ibm/helloworld_fortran_rk:latest
         ports:
         - containerPort: 8081
+        - protocol: TCP
+        imagePullPolicy: Always
