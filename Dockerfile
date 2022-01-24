@@ -12,7 +12,7 @@ WORKDIR /fortran/
 RUN make HelloWorld
  
 # NodeJs
-RUN curl -sL https://rpm.nodesource.com/setup_16.x | bash -
+#RUN curl -sL https://rpm.nodesource.com/setup_16.x | bash -
 RUN yum install -y nodejs
  
 #COPY package.json package-lock.json server.js users.json ./
