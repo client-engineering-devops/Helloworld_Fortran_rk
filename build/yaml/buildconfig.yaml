@@ -1,0 +1,26 @@
+kind: BuildConfig
+apiVersion: build.openshift.io/v1
+metadata:
+  name: helloworldfortran2
+  namespace: helloworldfortran
+spec:
+  triggers:
+    - type: ConfigChange
+  runPolicy: Serial
+  source:
+    type: Git
+    git:
+      uri: 'https://github.ibm.com/TechGarageCode/Helloworld_Fortran_rk'
+      ref: master
+    sourceSecret:
+      name: helloworldfortransecret
+    contextDir: ''
+  strategy:
+    type: Docker
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+  output:
+    to:
+      kind: ImageStreamTag
+      name: 'helloworldfortran2:latest'
+

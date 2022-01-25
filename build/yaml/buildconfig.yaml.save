@@ -1,0 +1,28 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  name: helloworldfortran2
+  labels:
+    app: helloworldfortran2
+spec:
+  source:
+    type: Git
+    git:
+      uri: https://github.ibm.com/TechGarageCode/Helloworld_Fortran_rk
+      ref: master
+    sourceSecret:
+      name: helloworldfortransecret
+  strategy:
+    type: Docker                      
+    dockerStrategy:
+      dockerfilePath: Dockerfile
+      from:
+        kind: ImageStreamTag       # Use an imagestream tag as 'FROM'
+        namespace: helloworldfortran    # Which project?
+        name: helloworldfortran2:latest        # Use the imagestream name referenced in the imagestream yaml created above
+  output:
+    to:
+      kind: ImageStreamTag
+      name: helloworldfortran2:latest
+  triggers:
+  - type: ImageChange              # Trigger 
